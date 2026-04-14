@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Salary Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="neon-text">SALARY<span>PREDICTOR</span></h1>
+            <p class="subtitle">AI-Powered Financial Insights</p>
+        </header>
+
+        <main class="glass-card">
+            <form id="prediction-form">
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label>Age</label>
+                        <input type="number" id="age" min="18" max="100" value="25" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Years of Experience</label>
+                        <input type="number" id="years_exp" min="0" max="50" step="0.5" value="2" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select...</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Education Level</label>
+                        <select id="education" required>
+                            <option value="">Select...</option>
+                        </select>
+                    </div>
+                    <div class="input-group full-width">
+                        <label>Job Title</label>
+                        <select id="job_title" required>
+                            <option value="">Select...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="neon-button">PREDICT SALARY</button>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <h3>Estimated Annual Salary</h3>
+                <div id="salary-result" class="salary-display">--</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Designed for Showcase | Powered by Random Forest AI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
